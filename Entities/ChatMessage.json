@@ -1,0 +1,40 @@
+{
+  "name": "ChatMessage",
+  "type": "object",
+  "properties": {
+    "group_name": {
+      "type": "string",
+      "description": "The chat group this message belongs to"
+    },
+    "sender_name": {
+      "type": "string",
+      "description": "Name of the user who sent the message"
+    },
+    "sender_language": {
+      "type": "string",
+      "description": "Language code of the sender"
+    },
+    "original_message": {
+      "type": "string",
+      "description": "The original message in sender's language"
+    },
+    "translations": {
+      "type": "object",
+      "description": "Translations of the message in different languages",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "description": "When the message was sent"
+    }
+  },
+  "required": [
+    "group_name",
+    "sender_name",
+    "sender_language",
+    "original_message"
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "name": "UserPresence",
+  "type": "object",
+  "properties": {
+    "group_name": {
+      "type": "string",
+      "description": "The chat group the user is in"
+    },
+    "user_name": {
+      "type": "string",
+      "description": "Name of the user"
+    },
+    "language": {
+      "type": "string",
+      "description": "User's preferred language code"
+    },
+    "last_seen": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Last activity timestamp"
+    },
+    "is_online": {
+      "type": "boolean",
+      "default": true,
+      "description": "Whether user is currently online"
+    }
+  },
+  "required": [
+    "group_name",
+    "user_name",
+    "language",
+    "last_seen"
+  ]
+}
